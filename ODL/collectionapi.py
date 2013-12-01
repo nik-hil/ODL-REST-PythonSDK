@@ -95,7 +95,7 @@ class CollectionApi(RestAPI):
         dynamically learnt on the network
         '''
         action = self.action['get']
-        raw_url = ' /controller/nb/v2/hosttracker/{containerName}/hosts/active'
+        raw_url = '/controller/nb/v2/hosttracker/{containerName}/hosts/active'
         if url_params:
             return self.get_result(action, raw_url, url_params)
     
@@ -408,8 +408,9 @@ class CollectionApi(RestAPI):
         if url_params:
             return self.get_result(action, raw_url, url_params)
         
-    def switch_add_nodeconnector(self,url_params,flow):
-        '''Delete a property of a node connector
+    def switch_add_nodeconnector(self,url_params):
+        '''Add node-connector property to a node connector. This method returns a 
+        non-successful response if a node connector by the given name already exists.
         code    description
         201     Operation successful
         401     User not authorized to perform this operation
@@ -420,11 +421,11 @@ class CollectionApi(RestAPI):
         action = self.action['put']
         raw_url = '/controller/nb/v2/switchmanager/{containerName}/nodeconnector/{nodeType}/{nodeId}/{nodeConnectorType}/{nodeConnectorId}/property/{propertyName}/{propertyValue}'
         if url_params:
-            return self.get_result(action, raw_url, url_params,flow)
+            return self.get_result(action, raw_url, url_params)
         
     #all rest api related to user manager
     def user_add(self,url_params,flow):
-        '''Delete a property of a node connector
+        '''Add a user
         code    description
         201     User created successfully
         400     Invalid data passed
@@ -440,7 +441,7 @@ class CollectionApi(RestAPI):
             return self.get_result(action, raw_url, url_params,flow)
         
     def user_delete(self,url_params):
-        '''Delete a property of a node connector
+        '''Delete a user
         code    description
         204     User Deleted Successfully
         401     User not authorized to perform this operation
@@ -576,7 +577,7 @@ class CollectionApi(RestAPI):
         if url_params:
             return self.get_result(action, raw_url, url_params)
     
-    def connection_delete_(self,url_params):
+    def connection_delete(self,url_params):
         '''Disconnect an existing Connection.
         '''
         action = self.action['put']
