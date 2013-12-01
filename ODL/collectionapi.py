@@ -104,7 +104,7 @@ class CollectionApi(RestAPI):
         connected to a NodeConnector that is down
         '''
         action = self.action['get']
-        raw_url = ' /controller/nb/v2/hosttracker/{containerName}/hosts/inactive'
+        raw_url = '/controller/nb/v2/hosttracker/{containerName}/hosts/inactive'
         if url_params:
             return self.get_result(action, raw_url, url_params)
     #all rest api related to flow programmer
@@ -278,7 +278,7 @@ class CollectionApi(RestAPI):
         '''List all the subnets in a given container.
         '''
         action = self.action['get']
-        raw_url = ' /controller/nb/v2/subnetservice/{containerName}/subnet/{subnetName}'
+        raw_url = '/controller/nb/v2/subnetservice/{containerName}/subnet/{subnetName}'
         if url_params:
             return self.get_result(action, raw_url, url_params)
 
@@ -294,7 +294,7 @@ class CollectionApi(RestAPI):
         503     Service unavailable
         '''
         action = self.action['put']
-        raw_url = ' /controller/nb/v2/subnetservice/{containerName}/subnet/{subnetName}'
+        raw_url = '/controller/nb/v2/subnetservice/{containerName}/subnet/{subnetName}'
         if url_params:
             return self.get_result(action, raw_url, url_params,flow)
 
@@ -308,7 +308,7 @@ class CollectionApi(RestAPI):
         503     Service unavailable
         '''
         action = self.action['delete']
-        raw_url = ' /controller/nb/v2/subnetservice/{containerName}/subnet/{subnetName}'
+        raw_url = '/controller/nb/v2/subnetservice/{containerName}/subnet/{subnetName}'
         if url_params:
             return self.get_result(action, raw_url, url_params)
         
@@ -326,7 +326,7 @@ class CollectionApi(RestAPI):
 
         '''
         action = self.action['post']
-        raw_url = ' /controller/nb/v2/subnetservice/{containerName}/subnet/{subnetName}'
+        raw_url = '/controller/nb/v2/subnetservice/{containerName}/subnet/{subnetName}'
         if url_params:
             return self.get_result(action, raw_url, url_params,flow)
     
@@ -349,7 +349,7 @@ class CollectionApi(RestAPI):
         503     One or more of Controller Services are unavailable
         '''
         action = self.action['post']
-        raw_url = ' /controller/nb/v2/switchmanager/{containerName}/save'
+        raw_url = '/controller/nb/v2/switchmanager/{containerName}/save'
         if url_params:
             return self.get_result(action, raw_url, url_params,flow)
         

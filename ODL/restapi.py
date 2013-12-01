@@ -83,7 +83,7 @@ class RestAPI():
         ''' get_result
         '''
         if action and raw_url and url_params:
-            url_call = self.url_modifier(raw_url,url_params)
+            url_call = self.url_modifier(raw_url.strip(),url_params)
             url = self.get_url(url_call)
             return self.send_reqests(action, url, flow)
         return "Error: one or more parameters were not valid"
