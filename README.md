@@ -1,7 +1,7 @@
 ODL-REST-PythonSDK
 ==================
 
-Python SDK for OpenDaylight Controller Rest API
+Python SDK for OpenDaylight Controller Rest API.
 
 All REST api are collected from <code>https://wiki.opendaylight.org/view/OpenDaylight_Controller:REST_Reference_and_Authentication</code>
 
@@ -18,6 +18,8 @@ This is easy to use,
   result = collection.statistics_get_all_node(url_params)
   print result.json()
   ```
+*My Blog is [http://net-ed.blogspot.in/] [1]*
+
   
 Little More Details
 -------------------
@@ -28,3 +30,6 @@ Parameters for each method are, <code>url_params and flow </code>
 * <code>url_params</code> inside a raw url for e.g <code>/controller/nb/v2/topology/{containerName}/userLinks</code>
 You have to specify <code>containerName</code> in dict format <code>{'containerName':'default'}<code>.
 * <code>flow</code> If request type is <code>put/post</code> and some places <code>delete</code>, you have to specify json parameter. flow type is dict. Internally flow is converted to json.
+
+
+  [1]: http://net-ed.blogspot.in/
