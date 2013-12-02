@@ -19,7 +19,7 @@ This is easy to use,
   print result.json()
   ```
 *My Blog is [http://net-ed.blogspot.in/] [1]*
-
+*I am looking for help to come up with good method names. Ping me if you have any suggestions*
   
 Little More Details
 -------------------
